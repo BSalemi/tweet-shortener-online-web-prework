@@ -34,11 +34,10 @@ end
 
 def selective_tweet_shortener(tweets)
     tweets.collect do |tweet|
-      tweet.split(" ")
-      if tweet.length < 140
+      if tweet.length > 140
         puts word_substituter(tweet)
       else
         tweet
       end
-    end.join(" ")
+    end
 end 
